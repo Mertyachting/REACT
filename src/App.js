@@ -21,6 +21,28 @@ const list = [
   },
 ];
 
+const games = [{
+  title: 'Destiny',
+  url: 'https://www.destinythegame.com/',
+  genre: 'Shooter/MMORPG',
+  usk: 16
+},
+{
+  title: 'Pokemon Sword/Shield',
+  url: 'https://swordshield.pokemon.com',
+  genre: 'rpg',
+  usk: 'pending'
+}
+
+]
+
+const numbers = [1,2,3,4,5];
+const doubled = numbers.map((number)=> number % 2);
+console.log(doubled);
+
+const listItems = numbers.map((number)=>
+<li>{number}</li>);
+
 class App extends Component{
   render(){
     return(
@@ -32,9 +54,21 @@ class App extends Component{
             <span>{item.author}</span>
             <span>{item.num_comments}</span>
             <span>{item.points}</span>
-            </div>
-        );
-      })}
+            <li>Object ID : {item.objectID}</li>
+            </div> 
+        )})}
+        {games.map(function(game){
+          return (
+            <div>
+              <a href={game.url}><h1>{game.title}</h1></a>
+             
+                <li>Genre: {game.genre}</li>
+                <li>Rating: {game.usk}</li>
+              </div>
+          )
+        }
+        )}
+
         </div>
     );
   }
