@@ -4,12 +4,9 @@ import './App.css';
 
 class App extends Component{
   render(){
-    var name;
-    var surname;
-    var helloWorld = "This is the start of a great Journey";
-    var wasGeht = 'Was geht ab?';
-    return(name
-    );
+    const helloWorld = 'Welcome to the Road to learn React';
+    return( helloWorld
+    )
   }
 }
 
